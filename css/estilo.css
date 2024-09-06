@@ -1,0 +1,43 @@
+*{margin: 0px;}
+html, body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+@media(max-width: 600px){
+	.carousel{display: none;}
+	.font-title{margin-left: 8%;}
+}
+#img-carousel{
+	height: 25rem;
+}
+@font-face {
+	src: url('../fonts/southpaw_2/Southpaw.ttf');
+	font-family: "Southpaw";
+}
+@font-face {
+	src: url('../fonts/cute_notes/Cute Notes.ttf');
+	font-family: "cutes notes";
+}
+.font-southpaw{
+	font-family: "Southpaw";
+}
+.font-cutes{
+	font-family: "cutes notes";
+}
+#pacotes .card{
+	width: 85%; 
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#pacotes .card-img{height: 250px;}
+#pacotes .card{border-radius: 10px; margin-bottom: 8%;}
+#pacotes .card-img{border-radius: 10px 10px 0px 0px}
+#pacotes .card:hover{scale: 1.05;}
+#pacotes .card-body a{margin-top: 5%;}
+.carousel{margin-top: 0;}
+#fundo{
+	height: 100vh;
+	background-image: url('../img/fundo.png');
+	background-repeat: no-repeat;
+	background-size: 120%;
+}
