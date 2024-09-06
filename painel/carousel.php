@@ -4,6 +4,11 @@
 	require_once './carousel/modal.php';
 	require_once './carousel/script.php';
 ?>
+<style>
+	.card-img{height: 400px;}
+	.row .card{margin-bottom: 3%;}
+	.card{border-radius:10px;}
+</style>
 <body>
 	<?php require_once 'nav.php'; ?>
 	<div class="container-fluid">
@@ -31,8 +36,24 @@
 				<div class="col-sm-3">
 					<div class="card">
 						<img src="../img/carousel/<?php echo $l['url_imagem_carousel']; ?>" alt="" class="card-img img-fluid">
+						<div class="card-body">
+						<?php echo $l['ds_carousel'];?>
+						</div>
 						<div class="card-footer text-center">
-							<button class="btn btn-danger">
+							<button class="btn btn-info btn-sm edit" data-toggle="modal" 
+							data-target="#edit" 
+							title="editar" 
+							cd="<?php echo $l['cd_carousel'];?>"
+							status="<?php echo $l['st_carousel'];?>"
+							descricao="<?php echo $l['ds_carousel']?>">
+								<i class="bi bi-pencil"></i>
+							</button>
+							<button class="btn btn-danger btn-sm delete"
+							data-target="#delete"
+							data-toggle="modal"
+							title="excluir"
+							cd="<?php echo $l['cd_carousel'];?>"
+							imagem="<?php echo $l['url_imagem_carousel'];?>">
 								<i class="bi bi-trash3"></i>
 							</button>
 						</div>
