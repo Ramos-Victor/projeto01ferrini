@@ -13,6 +13,9 @@ require_once './carousel/script.php';
     .row .card{
         margin-bottom: 3%
     }
+    .card-footer{
+        column-gap: 4px;
+    }
 </style>
 
 <body>
@@ -25,7 +28,7 @@ require_once './carousel/script.php';
                 </h3>
             </div>
             <div class="col-sm-2">
-                <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#upload">
+                <button class="btn btn-success btn-block" data-toggle="modal" data-target="#upload">
                     + Imagem
                 </button>
             </div> 
@@ -55,7 +58,7 @@ require_once './carousel/script.php';
                     </span>
                     <?php echo $l['ds_carousel']; ?>
                 </div>
-                <div class="card-footer text-center">
+                <div class="card-footer justify-content-center text-center d-flex flex-row">
                     <button class="btn btn-info btn-sm edit"
                     data-toggle="modal"
                     data-target="#edit"
