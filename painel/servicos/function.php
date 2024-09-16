@@ -20,7 +20,7 @@ function UploadServico($imagem,$nome, $descricao, $pagina){
         return $res;
     }
     else{
-      echo '<div class="ml-3">Sem servicos cadastradas!</div>';
+      echo '<div class="ml-3 text-center">Sem servicos cadastradas!</div>';
     }
   }
 

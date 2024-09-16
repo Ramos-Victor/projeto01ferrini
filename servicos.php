@@ -28,9 +28,7 @@
     </div>
     <?php
                 } 
-            }else{
-                Echo "Sem servicos cadastrados!";
-            }    
+            }
     ?>
   </div>  
 </section>
