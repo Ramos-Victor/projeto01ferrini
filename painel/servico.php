@@ -68,7 +68,7 @@ require_once './servicos/script.php';
                         data-target="#edit"
                         title="editar"
                         cd="<?php echo $l['cd_servico']; ?>"
-                        nome="<?php echo $l['nm_servico'];?>"
+                        nm="<?php echo $l['nm_servico'];?>"
                         descricao="<?php echo $l['ds_servico'];?>">
                             <i class="bi bi-pencil"></i>
                         </button>
@@ -117,6 +117,34 @@ require_once './servicos/script.php';
                 $_POST['nm'],
                 $_POST['descricao'],
                 "servico.php"  
+            );
+            }
+        }else if($_POST['action'] == "Alterar Imagem"){
+            $extensao = pathinfo($_FILES['imagem']['name'],PATHINFO_EXTENSION);
+            if($extensao == "png" || $_extensao == "jpg" || $extensao == "jpeg" ||
+            $extensao == "jfif" || $extensao == "webp"){
+                $uploaddir = '../img/pacotes/';
+                if($extensao == "jpeg"){
+                    $ext = strtolower(substr($_FILES['imagem']['name'],-5));
+                }
+                else if($extensao == "jfif"){
+                    $ext = strtolower(substr($_FILES['imagem']['name'],-5));
+                }
+                else if($extensao == "webp"){
+                    $ext = strtolower(substr($_FILES['imagem']['name'],-5));
+                }
+                else{
+                    $ext = strtolower(substr($_FILES['imagem']['name'],-4));
+                }
+                $imagem = md5(date("d-m-y-h-i-s").$_FILES['imagem']['name']).$ext;
+                $uploadfile = $uploaddir . basename($imagem);
+                chmod($uploadfile, 0777);
+                move_uploaded_file($_FILES['imagem']['tmp_name'], $uploadfile);
+
+            EditarImagemServico(
+                $_POST['cd'],
+                $imagem,
+                $pagina
             );
             }
         }

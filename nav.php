@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
   <a class="navbar-brand" href="index.php">
     Revisão
   </a>

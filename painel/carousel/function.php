@@ -52,6 +52,22 @@ function UploadImagemCarousel($imagem, $descricao, $status, $pagina){
     DML ($sql, "Alterado com sucesso!", "Ops! Não foi alterado!", $pagina);
   }
 
+  function EditarImagemCarousel($item, $imagem, $pagina){
+    $sql = 'select url_imagem_carousel from tb_carousel where cd_carousel =' .$item;
+    $smt = $GLOBALS['con']->query($sql);
+    $r = $smt->fetch_assoc();
+
+    $dir = "../img/carousel/".$r['url_imagem_carousel'];
+    chmod($dir, 0777);
+    unlink($dir);
+    $sql = 'update tb_carousel set
+            url_imagem_carousel = "'.$imagem.'"
+            where
+            cd_carousel = '.$item;
+            DML($sql, "Imagem alterada com sucesso!", "Ops! Não foi alterado!", $pagina);
+
+  }
+
   function Delete($item, $imagem, $pagina){
   $dir = "../img/carousel/".$imagem;
   unlink($dir);

@@ -59,13 +59,22 @@ require_once './carousel/script.php';
                     <?php echo $l['ds_carousel']; ?>
                 </div>
                 <div class="card-footer justify-content-center text-center d-flex flex-row">
+                    <button class="btn btn-Warning btn-sm editimg"
+                    data-toggle="modal"
+                    data-target="#editimg"
+                    title="editarimg"
+                    cd="<?php echo $l['cd_carousel']; ?>"
+                    imagem="<?php echo $l['url_imagem_carousel']; ?>">
+                        <i class="bi bi-image-fill"></i>
+                    </button>
                     <button class="btn btn-info btn-sm edit"
                     data-toggle="modal"
                     data-target="#edit"
                     title="editar"
                     cd="<?php echo $l['cd_carousel']; ?>"
                     status="<?php echo $l['st_carousel']; ?>"
-                    descricao="<?php echo $l['ds_carousel']; ?>">
+                    descricao="<?php echo $l['ds_carousel']; ?>"
+                    imagem="<?php echo $l['url_imagem_carousel']; ?>">
                         <i class="bi bi-pencil">
                         </i>
                     </button>
@@ -115,6 +124,35 @@ require_once './carousel/script.php';
                 $_POST['descricao'],
                 $_POST['status'],
                 "carousel.php"  
+            );
+            }
+        }
+        else if($_POST['action'] == "Alterar Imagem"){
+            $extensao = pathinfo($_FILES['imagem']['name'],PATHINFO_EXTENSION);
+            if($extensao == "png" || $_extensao == "jpg" || $extensao == "jpeg" ||
+            $extensao == "jfif" || $extensao == "webp"){
+                $uploaddir = '../img/carousel/';
+                if($extensao == "jpeg"){
+                    $ext = strtolower(substr($_FILES['imagem']['name'],-5));
+                }
+                else if($extensao == "jfif"){
+                    $ext = strtolower(substr($_FILES['imagem']['name'],-5));
+                }
+                else if($extensao == "webp"){
+                    $ext = strtolower(substr($_FILES['imagem']['name'],-5));
+                }
+                else{
+                    $ext = strtolower(substr($_FILES['imagem']['name'],-4));
+                }
+                $imagem = md5(date("d-m-y-h-i-s").$_FILES['imagem']['name']).$ext;
+                $uploadfile = $uploaddir . basename($imagem);
+                chmod($uploadfile, 0777);
+                move_uploaded_file($_FILES['imagem']['tmp_name'], $uploadfile);
+
+            EditarImagemCarousel(
+                $_POST['cd'],
+                $imagem,
+                $pagina
             );
             }
         }

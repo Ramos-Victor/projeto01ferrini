@@ -43,7 +43,7 @@ function UploadServico($imagem,$nome, $descricao, $pagina){
   function EditarServico($item,$servico, $descricao, $pagina){
     $sql = 'update tb_servicos set
             nm_servico = "'.$servico.'",
-            ds_servico = "'.$descricao.'",
+            ds_servico = "'.$descricao.'"
             where
             cd_servico = '.$item;
     DML ($sql, "Alterado com sucesso!", "Ops! Não foi alterado!", $pagina);

@@ -43,7 +43,7 @@
 							<input 
 								type="submit" 
 								name="action" 
-								class="btn btn-outline-primary btn-block" 
+								class="btn btn-outline-success btn-block" 
 								value="Entrar">
 						</form>
 					</div>

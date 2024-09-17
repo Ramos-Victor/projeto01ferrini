@@ -94,7 +94,7 @@
             <div class="modal-body">
                 <input type="text" name="cd" class="form-control" id="cd" readonly="readonly">
                 <br>
-                <input type="text" name="imagem" id="imagem" class="form-control">
+                <input type="text" name="imagem" id="imagem" class="form-control" readonly>
                     <h4 class="text-danger font-weight-bolder">
                         Deseja realmente exlcuir este item?
                     </h4>
@@ -118,6 +118,8 @@
             </div>
             <div class="modal-body">
                 <Textarea name="cd" id="cd" class="form-control" rows="1" placeholder="Código do pacote" readonly="readonly"></Textarea>
+                <br>
+                <Textarea name="imagem" id="imagem" class="form-control" rows="1" placeholder="URL da imagem" readonly="readonly"></Textarea>
                 <br>
                 <input type="file" name="imagem" class="form-control">
                 <br>

@@ -57,6 +57,8 @@
             <div class="modal-body">
                 <Textarea name="cd" id="cd" class="form-control" rows="1" placeholder="Código do serviço" readonly="readonly"></Textarea>
                 <br>
+                <Textarea name="imagem" id="imagem" class="form-control" rows="1" placeholder="URL imagem" readonly="readonly"></Textarea>
+                <br>
                 <input type="file" name="imagem" class="form-control">
                 <br>
             </div>
@@ -75,12 +77,12 @@
     <div class="modal-dialog modal-md div modal-content">
         <form method="post" enctype="multipart/form-data" class="form-group">
             <div class="modal-header">
-                Exlcuir 
+                Excluir 
             </div>
             <div class="modal-body">
-                <input type="text" name="cd" class="form-control" id="cd">
+                <input type="text" name="cd" class="form-control" id="cd" readonly>
                 <br>
-                <input type="text" name="imagem" id="imagem" class="form-control">
+                <input type="text" name="imagem" id="imagem" class="form-control" readonly>
                     <h4 class="text-danger font-weight-bolder">
                         Deseja realmente exlcuir este item?
                     </h4>
