@@ -68,6 +68,10 @@ require_once './pacotes/script.php';
                     <?php echo $l['ds_acomodacao']; ?>
                     </strong>
                     <br>
+                    <strong>Valor:
+                    <?php echo $l['vl_pacote']; ?>
+                    </strong>
+                    <br>
                     <strong>Quantidade de Parcelas:
                     <?php echo $l['qt_parcela_pacote']; ?>x
                     </strong>
@@ -90,6 +94,7 @@ require_once './pacotes/script.php';
                         destino="<?php echo $l['nm_destino_pacote'];?>"
                         periodo="<?php echo $l['ds_periodo'];?>"
                         acomodacao="<?php echo $l['ds_acomodacao'];?>"
+                        valor="<?php echo $l['vl_pacote'];?>"
                         parcela="<?php echo $l['qt_parcela_pacote'];?>">
                             <i class="bi bi-pencil"></i>
                         </button>
@@ -147,6 +152,7 @@ require_once './pacotes/script.php';
                 $_POST['destino'],
                 $_POST['periodo'],
                 $_POST['acomodacao'],
+                $_POST['valor'],
                 $_POST['parcela'],
                 $_POST['status'],
                 "pacotes.php"  
@@ -188,6 +194,7 @@ require_once './pacotes/script.php';
                 $_POST['destino'],
                 $_POST['periodo'],
                 $_POST['acomodacao'],
+                $_POST['valor'],
                 $_POST['parcela'],
                 $pagina
             );

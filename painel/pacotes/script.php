@@ -26,6 +26,8 @@
     $('.modal #acomodacao').val(acomodacao);
     var parcela = $(this).attr('parcela');
     $('.modal #parcela').val(parcela);
+    var valor = $(this).attr('valor');
+    $('.modal #valor').val(valor);
   });
 
   $(document).on('click', '.delete', function(){

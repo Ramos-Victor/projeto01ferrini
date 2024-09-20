@@ -35,8 +35,6 @@
             <div class="modal-body">
                 <input type="text" name="cd" class="form-control" id="cd" readonly>
                 <br>
-                <input type="file" name="imagem" class="form-control">
-                <br>
                 <Textarea name="descricao" id="descricao" class="form-control" rows="5" placeholder="descrição"></Textarea>
                 <br>
                 <select name="status" id="status" class="form-control">
@@ -58,7 +56,7 @@
     <div class="modal-dialog modal-md div modal-content">
         <form method="post" enctype="multipart/form-data" class="form-group">
             <div class="modal-header">
-                Editar Imagem do Pacote
+                Editar Imagem do Carousel
             </div>
             <div class="modal-body">
                 <Textarea name="cd" id="cd" class="form-control" rows="1" placeholder="Código do pacote" readonly="readonly"></Textarea>

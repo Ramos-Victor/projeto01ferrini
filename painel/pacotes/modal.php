@@ -14,6 +14,8 @@
                 <br>
                 <Textarea name="acomodacao" class="form-control" rows="3" placeholder="Descrição da Acomodação"></Textarea>
                 <br>
+                <Textarea name="valor" id="valor" class="form-control" rows="3" placeholder="Valor do pacote"></Textarea>
+                <br>
                 <label> Quantidade de Parcelas</label>
                 <select name="parcela" class="form-control" placeholder="Quantidade de Parcelas">
                     <option>1</option>
@@ -59,6 +61,8 @@
                 <br>
                 <Textarea name="acomodacao" id="acomodacao" class="form-control" rows="3" placeholder="Descrição da Acomodação"></Textarea>
                 <br>
+                <Textarea name="valor" id="valor" class="form-control" rows="3" placeholder="Valor do pacote"></Textarea>
+                <br>
                 <label> Quantidade de Parcelas</label>
                 <select name="parcela" id="parcela" class="form-control" placeholder="Quantidade de Parcelas">
                     <option>1</option>
@@ -96,7 +100,7 @@
                 <br>
                 <input type="text" name="imagem" id="imagem" class="form-control" readonly>
                     <h4 class="text-danger font-weight-bolder">
-                        Deseja realmente exlcuir este item?
+                        Deseja realmente excluir este item?
                     </h4>
             </div>
             <div class="modal-footer">

@@ -123,7 +123,7 @@ require_once './servicos/script.php';
             $extensao = pathinfo($_FILES['imagem']['name'],PATHINFO_EXTENSION);
             if($extensao == "png" || $_extensao == "jpg" || $extensao == "jpeg" ||
             $extensao == "jfif" || $extensao == "webp"){
-                $uploaddir = '../img/pacotes/';
+                $uploaddir = '../img/servicos/';
                 if($extensao == "jpeg"){
                     $ext = strtolower(substr($_FILES['imagem']['name'],-5));
                 }

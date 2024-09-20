@@ -29,13 +29,13 @@ function UploadServico($imagem,$nome, $descricao, $pagina){
     $smt = $GLOBALS['con']->query($sql);
     $r = $smt->fetch_assoc();
 
-    $dir = "../img/servicos/".$r['url_imagem_servicos'];
+    $dir = "../img/servicos/".$r['url_imagem_servico'];
     chmod($dir, 0777);
     unlink($dir);
     $sql = 'update tb_servicos set
             url_imagem_servico = "'.$imagem.'"
             where
-            cd_servicos = '.$item;
+            cd_servico = '.$item;
             DML($sql, "Imagem alterada com sucesso!", "Ops! Não foi alterado!", $pagina);
 
   }

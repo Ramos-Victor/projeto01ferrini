@@ -24,7 +24,7 @@
             <div class="card-body"><h3 class= "font-weight-bolder"> Destino: <?php echo $l['nm_destino_pacote'] ?> </h3>
                 <strong> Periodo: </strong> <?php echo $l['ds_periodo'] ?><br>
                 <strong> Acomodações: </strong> <?php echo $l['ds_acomodacao'] ?><br>
-                <strong style="font-size: 25pt;"> R$ 125,00 </strong>(dia/pessoa)<br>
+                <strong style="font-size: 25pt;"> R$ <?php echo $l['vl_pacote']?> </strong>(dia/pessoa)<br>
                 <strong> Parcele em até <?php echo $l['qt_parcela_pacote'] ?> sem juros </strong>
                 <br>
                 <br>
