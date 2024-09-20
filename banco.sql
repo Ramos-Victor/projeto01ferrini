@@ -33,6 +33,7 @@ create table tb_pacote(
   nm_destino_pacote varchar(80) not null,
   ds_periodo varchar(80) not null,
   ds_acomodacao longtext not null,
+  vl_pacote decimal(8,2) not null,
   qt_parcela_pacote int not null,
   url_imagem_pacote varchar(80) not null,
   st_pacote char(1) not null default "1",
